@@ -1,5 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Sayfa içeriğinin navigasyonun altından başlaması için body'e padding ekliyoruz */
+body {
+    padding-top: 60px; /* Navigasyon çubuğunun yüksekliğine göre ayarlayın */
+}
+
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Başlangıçta arka plan rengi #f0f0f0 (content-section ile aynı) */
+    background-color: #f0f0f0; 
+    padding: 10px 20px;
+    box-shadow: none; /* Başlangıçta gölge yok */
+    border-radius: 0; /* Sivri köşeler */
+    position: fixed; /* Sabit konumlandırma */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Diğer elementlerin üzerinde olması için */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Geçiş efektleri */
+}
+
+/* Navigasyon görünür olduğunda uygulanacak stil */
+#main-nav.scrolled {
+    background-color: rgb(255, 255, 255); /* Aşağı inince beyaz arka plan */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Aşağı inince gölge */
+}
+
+.nav-left {
+    display: flex;
+    gap: 15px; /* Sloganlar arası boşluk */
+}
+
+.nav-left a {
+    color: black; /* Siyah yazılar */
+    text-decoration: none;
+    font-weight: normal; /* Normal kalınlık */
+}
+
+.nav-center {
+    flex-grow: 1; /* Ortadaki NEVA yazısının ortaya gelmesi için */
+    text-align: center;
+}
+
+.nav-center h1 {
+    margin: 0;
+    color: black; /* NEVA yazısı da siyah */
+    font-size: 2em; /* İstediğiniz boyutu ayarlayabilirsiniz */
+    font-weight: bold; /* Kalın olmasını isterseniz */
+}
+
+.nav-right button {
+    background-color: #ff0052; /* Pembe buton rengi */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0; /* Yuvarlak köşeleri kaldırıyoruz */
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.nav-right button.giris-yap {
+    background-color: #ff3366; /* Bir tık açık pembe */
+}
+
+
+
+
+
+
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -14,19 +94,19 @@ html {
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: #f8faf8;
   color: #212529;
 }
 
 /* HEADER */
 
-.header {
+/* .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: nowrap;
-  background-color: white;
+  background-color: rgb(35, 218, 96);
   padding: 0.5rem 7%;
   border-radius: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -34,18 +114,18 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-}
+} */
 
-/*logo tasarımı başlangıcı*/
+/*logo tasarımı başlangıcı
 .logo {
   flex-shrink: 0;
-  /* logo sabit kalsın */
+   logo sabit kalsın 
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  height: 9rem; /* ya da kullandığın boyut neyse */
+  height: 9rem; /* ya da kullandığın boyut neyse 
   width: auto;
   border-radius: 25px;
 }
@@ -54,11 +134,12 @@ body {
   font-size: 1.7rem;
   font-weight: 600;
 }
-/*logo tasarım bitiş*/
+logo tasarım bitiş*/
 
-/* NAVBAR */
+
+/* NAVBAR 
 .navbar {
-  display:contents;
+  display: inline-block;
   gap: 2rem;
   justify-content: center;
 }
@@ -77,7 +158,7 @@ body {
 .navbar a.active {
   border-bottom: 2px solid #ff234f;
   color: #ff234f;
-}
+} */
 
 /* BUTONLAR */
 .btn {
@@ -112,14 +193,14 @@ body {
   background-color: #f1f1f1;
 }
 
-.kayitol {
+/* .kayitol {
   background-color: #ff234f;
   color: white;
 }
 
 .kayitol:hover {
   background-color: #e00a38;
-}
+} */
 
 /* MENU BUTTON */
 .menu-button {
@@ -129,9 +210,9 @@ body {
   cursor: pointer;
   color: #333;
 }
-.btn .kayitol {
+/* .btn .kayitol {
   border-radius: 30px;
-}
+} */
 
 /*  */
 
@@ -688,3 +769,11 @@ body {
         .completed {
             color: #2ecc71;
         }
+
+
+
+
+
+
+
+        
